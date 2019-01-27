@@ -1,0 +1,24 @@
+{
+  "name": "graphql-yoga_exists-bug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "db:deploy": "prisma deploy",
+    "debug": "nodemon -e js,graphql -r dotenv-safe/config --inspect .",
+    "dev": "nodemon -e js,graphql -r dotenv-safe/config .",
+    "start": "node -r dotenv/config ."
+  },
+  "dependencies": {
+    "bcrypt": "3.0.3",
+    "graphql-yoga": "1.17.0",
+    "jsonwebtoken": "8.4.0",
+    "prisma": "1.24.0",
+    "prisma-binding": "2.2.14"
+  },
+  "devDependencies": {
+    "dotenv-safe": "6.1.0",
+    "graphql-cli": "3.0.5",
+    "nodemon": "1.18.9"
+  }
+}

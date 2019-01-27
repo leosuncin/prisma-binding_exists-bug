@@ -1,0 +1,38 @@
+# import Roles from "./datamodel.graphql"
+mutation {
+  user1: createUser(
+    data: {
+      name: "Hazel Mckinney"
+      bio: "European minnow priapumfish mosshead warbonnet shrimpfish bigscale. Cutlassfish porbeagle shark ricefish walking catfish glassfish Black"
+      email: "hazel.mckinney24@example.com"
+      password: "$2b$10$KYrmWVj1bJWbWZifktk5rOKkFgA8kIkTuxf9ACrhx.FB3oojw14km" # "kathleen"
+      roles: { set: [USER] }
+    }
+  ) {
+    email
+  }
+
+  user2: createUser(
+    data: {
+      name: "Sandra Myers"
+      bio: "Lorem Khaled Ipsum is a major key to success. In life you have to take the trash out, if you have trash in your life, take it out, throw it away, get rid of it, major key. To be successful you’ve got to work hard, to make history, simple, you’ve got to make it. Find peace, life is like a water fall, you’ve gotta flow. To be successful you’ve got to work hard, to make history, simple, you’ve got to make it. Find peace, life is like a water fall, you’ve gotta flow. Bless up. In life you have to take the trash out, if you have trash in your life, take it out, throw it away, get rid of it, major key."
+      email: "sandra.myers73@example.com"
+      password: "$2b$10$llbV/a21fA8zjqvvY2pWk.6R7t.Mk7A9OpyN9nDRhcxrrJt9AiZfm" # "joshua1"
+      roles: { set: [ADMIN] }
+    }
+  ) {
+    email
+  }
+
+  user3: createUser(
+    data: {
+      name: "Claude Dean"
+      bio: "Execute core competencies so that as an end result, we make users into advo"
+      email: "claude.dean47@example.com"
+      password: "$2b$10$2jAOa.tCTdz43xVM8NsbUOL2k85pjcU1fxCU4ZMo.AZcEsHn57id2" # "cramps"
+      roles: { set: [USER] }
+    }
+  ) {
+    email
+  }
+}

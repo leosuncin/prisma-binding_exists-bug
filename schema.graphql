@@ -1,0 +1,17 @@
+# import Roles from "./prisma/generated.graphql"
+
+type Mutation {
+  signup(email: String!, name: String!, password: String!, bio: String): User!
+  login(email: String!, password: String!): User!
+}
+
+type Query {
+  existsEmail(email: String!): Boolean!
+}
+
+type User {
+  email: String!
+  name: String!
+  bio: String
+  roles: [Roles!]!
+}
