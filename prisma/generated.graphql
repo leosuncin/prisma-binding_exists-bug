@@ -1,5 +1,5 @@
 # source: http://localhost:4466
-# timestamp: Sun Jan 27 2019 15:08:01 GMT-0600 (Central Standard Time)
+# timestamp: Wed Jan 30 2019 16:33:43 GMT-0600 (hora estándar central)
 
 type AggregateUser {
   count: Int!
@@ -73,7 +73,8 @@ type Subscription {
   user(where: UserSubscriptionWhereInput): UserSubscriptionPayload
 }
 
-type User {
+type User implements Node {
+  id: ID!
   email: String!
   name: String!
   password: String!
@@ -113,6 +114,8 @@ type UserEdge {
 }
 
 enum UserOrderByInput {
+  id_ASC
+  id_DESC
   email_ASC
   email_DESC
   name_ASC
@@ -121,8 +124,6 @@ enum UserOrderByInput {
   password_DESC
   bio_ASC
   bio_DESC
-  id_ASC
-  id_DESC
   updatedAt_ASC
   updatedAt_DESC
   createdAt_ASC
@@ -130,6 +131,7 @@ enum UserOrderByInput {
 }
 
 type UserPreviousValues {
+  id: ID!
   email: String!
   name: String!
   password: String!
@@ -205,6 +207,46 @@ input UserWhereInput {
 
   """Logical NOT on all given filters combined by AND."""
   NOT: [UserWhereInput!]
+  id: ID
+
+  """All values that are not equal to given value."""
+  id_not: ID
+
+  """All values that are contained in given list."""
+  id_in: [ID!]
+
+  """All values that are not contained in given list."""
+  id_not_in: [ID!]
+
+  """All values less than the given value."""
+  id_lt: ID
+
+  """All values less than or equal the given value."""
+  id_lte: ID
+
+  """All values greater than the given value."""
+  id_gt: ID
+
+  """All values greater than or equal the given value."""
+  id_gte: ID
+
+  """All values containing the given string."""
+  id_contains: ID
+
+  """All values not containing the given string."""
+  id_not_contains: ID
+
+  """All values starting with the given string."""
+  id_starts_with: ID
+
+  """All values not starting with the given string."""
+  id_not_starts_with: ID
+
+  """All values ending with the given string."""
+  id_ends_with: ID
+
+  """All values not ending with the given string."""
+  id_not_ends_with: ID
   email: String
 
   """All values that are not equal to given value."""
@@ -368,5 +410,6 @@ input UserWhereInput {
 }
 
 input UserWhereUniqueInput {
+  id: ID
   email: String
 }

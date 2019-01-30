@@ -4,9 +4,10 @@ enum Roles {
 }
 
 type User {
+  id: ID! @unique
   email: String! @unique
   name: String!
-  password: String! @private
+  password: String!
   bio: String
   roles: [Roles!]!
 }
