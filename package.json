@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "db:deploy": "prisma deploy",
     "debug": "nodemon -e js,graphql -r dotenv-safe/config --inspect .",
     "dev": "nodemon -e js,graphql -r dotenv-safe/config .",
-    "start": "node -r dotenv/config ."
+    "start": "node -r dotenv/config .",
+    "test": "jest"
   },
   "dependencies": {
     "bcrypt": "3.0.3",
@@ -19,6 +21,7 @@
   "devDependencies": {
     "dotenv-safe": "6.1.0",
     "graphql-cli": "3.0.5",
+    "jest": "24.0.0",
     "nodemon": "1.18.9"
   }
 }

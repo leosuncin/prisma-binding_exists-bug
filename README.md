@@ -19,12 +19,8 @@
 
 # Test
 
-Open http://localhost:4000 and try
-
-```graphql
-query {
-  existsEmail(email: "hazel.mckinney24@example.com")
-}
-```
+1. Clean up the database `docker-compose down -v && sleep 3 && docker-compose up -d`
+2. Restore database and fixtures `yarn db:deploy` or `npm run db:deploy`
+3. Run functional tests `yarn test` or `npm test`
 
 You can debug the application with Visual Studio Code, already includes the settings `launch.json`
