@@ -1,5 +1,7 @@
 # prisma-binding error on call `exists` functions if datamodel doesn't expose `id`
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/leosuncin/prisma-binding_exists-bug.svg)](https://greenkeeper.io/)
+
 > This repository is a example to reproduce prisma-binding's issues [#275](https://github.com/prisma/prisma-binding/issues/275) [#252](https://github.com/prisma/prisma-binding/issues/252) [#215](https://github.com/prisma/prisma-binding/issues/215)
 
 # Requirements
