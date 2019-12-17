@@ -12,16 +12,16 @@
     "test": "jest"
   },
   "dependencies": {
-    "bcrypt": "3.0.3",
-    "graphql-yoga": "1.17.0",
-    "jsonwebtoken": "8.4.0",
-    "prisma": "1.24.0",
-    "prisma-binding": "2.2.14"
+    "bcrypt": "3.0.7",
+    "graphql-yoga": "1.18.3",
+    "jsonwebtoken": "8.5.1",
+    "prisma": "1.34.10",
+    "prisma-binding": "2.3.16"
   },
   "devDependencies": {
-    "dotenv-safe": "6.1.0",
-    "graphql-cli": "3.0.5",
-    "jest": "24.0.0",
-    "nodemon": "1.18.9"
+    "dotenv-safe": "8.2.0",
+    "graphql-cli": "3.0.14",
+    "jest": "24.9.0",
+    "nodemon": "2.0.2"
   }
 }
